@@ -1,20 +1,20 @@
 class Card():
     
+    RANK = ['2','3','4','5','6','7','8','9','10','J','Q','K','A']
+    SUITE = ['Hearts','Diamonds','Clubs','Spades']
     def __init__(self,suite,rank):
         
-        acceptedRanks = ['2','3','4','5','6','7','8','9','10','J','Q','K','A']
-        acceptedSuites = ['Hearts','Diamonds','Clubs','Spades']
         
         if not isinstance(suite,str):
             raise TypeError('Suite must be a string')
         if not isinstance(rank,str):
             raise TypeError('Rank must be a string')
         
-        if suite not in acceptedSuites:
-            raise ValueError('Suite must be one of the following: ' + ', '.join(acceptedSuites))
+        if suite not in Card.SUITE:
+            raise ValueError('Suite must be one of the following: ' + ', '.join(Card.SUITE))
         
-        if rank not in acceptedRanks:
-            raise ValueError('Rank must be one of the following: '+ ', '.join(acceptedRanks))
+        if rank not in Card.RANK:
+            raise ValueError('Rank must be one of the following: '+ ', '.join(Card.RANK))
         
         self.suite = suite
         self.rank = rank
