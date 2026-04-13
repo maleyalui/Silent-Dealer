@@ -23,6 +23,6 @@ class Card():
             return self.rank + ' of ' + self.suite
         
 
-if __name__ == '__main__':
-    card1 = Card('Diamonds','4')
-    print(card1.printCard())
+# if __name__ == '__main__':
+#     card1 = Card('Diamonds','4')
+#     print(card1.printCard())

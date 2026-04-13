@@ -65,11 +65,11 @@ class Deck():
         return topCard
     
  #Tests   
-if __name__ == '__main__':
-    d1=Deck()
-    d1.shuffle()
-    d1.burnCard()
-    card = d1.giveCard()
-    print('Card given: ' + card.printCard())
-    d1.printDeck()
+# if __name__ == '__main__':
+#     d1=Deck()
+#     d1.shuffle()
+#     d1.burnCard()
+#     card = d1.giveCard()
+#     print('Card given: ' + card.printCard())
+#     d1.printDeck()
     
