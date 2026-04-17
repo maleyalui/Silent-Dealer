@@ -10,8 +10,8 @@ class Deck():
         
         for rank in ranks:
             for suite in suites:
-                print(rank + ' of ' + suite)
-                print('------------------')
+                #print(rank + ' of ' + suite)
+                #print('------------------')
                 deck.append(Card(suite,rank))
                 
         self.deck = deck
@@ -65,11 +65,31 @@ class Deck():
         return topCard
     
  #Tests   
-# if __name__ == '__main__':
-#     d1=Deck()
-#     d1.shuffle()
-#     d1.burnCard()
-#     card = d1.giveCard()
-#     print('Card given: ' + card.printCard())
-#     d1.printDeck()
-    
+if __name__ == '__main__':
+    d1 = Deck()
+    d1.shuffle()
+    human_card = [d1.giveCard(),
+                  d1.giveCard(),
+                  d1.giveCard(),
+                  d1.giveCard(),
+                  d1.giveCard(),
+                  d1.giveCard(),
+                  d1.giveCard()
+                  ]
+    for card in human_card:
+        print(card.printCard())
+        print('------------------')
+        
+        royal = ["A", "K", "Q", "J", "10"]
+        
+        sorted_cards = []
+        
+        for rank in royal:
+            for card in human_card:
+                if card.rank == rank:
+                    sorted_cards.append(card)
+        
+        print("Sorted cards: ")
+        for card in sorted_cards:
+            print(card.printCard())
+            print('------------------')
