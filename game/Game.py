@@ -112,7 +112,7 @@ class Game():
         return True
     
     
-    def check_straight_flush(self):
+    def check_straight_flush(self,cards):
         # Five cards in sequence of the same suit
         pc_cards = self.community_cards + self.pc.cards
         human_cards = self.community_cards + self.human.cards
@@ -126,7 +126,7 @@ class Game():
         
         return None
     
-    def check_four_of_a_kind(self):
+    def check_four_of_a_kind(self,cards):
         # Four cards of the same rank
         pc_cards = self.community_cards + self.pc.cards
         human_cards = self.community_cards + self.human.cards
@@ -141,7 +141,7 @@ class Game():
             
         return None
     
-    def check_full_house(self):
+    def check_full_house(self,cards):
         # Three of a kind and a pair
         pc_cards = self.community_cards + self.pc.cards
         human_cards = self.community_cards + self.human.cards
@@ -162,7 +162,7 @@ class Game():
             
         return None
     
-    def check_flush(self): 
+    def check_flush(self,cards): 
         # Five cards of the same suit
         pc_cards = self.community_cards + self.pc.cards
         human_cards = self.community_cards + self.human.cards
